@@ -15,7 +15,8 @@ end
 
 def get_japanese_emoticon(path,emoticon)
   hash = load_library(path)
-  return hash[:get_emoticon][emoticon] if 
+  return hash[:get_emoticon][emoticon] if hash[:get_emoticon][emoticon]
+  return "Invalid entry!"
 end
 
 def get_english_meaning
