@@ -5,11 +5,10 @@ def load_library(path)
     :get_meaning => {},
     :get_emoticon => {}
   }
-  get_meaning = {}
   emo = YAML.load_file("./lib/emoticons.yml")
   emo.each_key do |key|
     get_meaning[emo[key][1]] = key
-    
+    get_emoticon[emo[key][0]] = key
   end
   return hash
 end
