@@ -5,7 +5,7 @@ def load_library(path)
   emo = YAML.load_file("./lib/emoticons.yml")
   emo.each_key do |key|
     get_meaning.push(key)
-end
+  end
   return get_meaning
 end
 
