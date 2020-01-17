@@ -1,6 +1,10 @@
 # require modules here
 require "yaml"
 def load_library(path)
+  hash = {
+    :get_meaning => {},
+    
+  }
   get_meaning = {}
   emo = YAML.load_file("./lib/emoticons.yml")
   emo.each_key do |key|
