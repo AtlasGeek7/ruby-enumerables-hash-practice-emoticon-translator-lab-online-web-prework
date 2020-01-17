@@ -1,7 +1,12 @@
 # require modules here
-
-def load_library
-  # code goes here
+require "yaml"
+def load_library(path)
+  get_meaning = []
+  emo = YAML.load_file("./lib/emoticons.yml")
+  emo.each_key do |key|
+    get_meaning.push(key)
+end
+  return get_meaning
 end
 
 def get_japanese_emoticon
