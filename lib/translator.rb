@@ -10,7 +10,7 @@ def load_library(path)
   emo.each_key do |key|
     get_meaning[emo[key][1]] = emo[key][0]
   end
-  return get_meaning
+  return hash
 end
 
 def get_japanese_emoticon
