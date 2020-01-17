@@ -9,6 +9,7 @@ def load_library(path)
   emo = YAML.load_file("./lib/emoticons.yml")
   emo.each_key do |key|
     get_meaning[emo[key][1]] = key
+    
   end
   return hash
 end
